@@ -58,7 +58,7 @@ const Dashboard = () => {
 
   return (
     <Row className="dashboard-content-page text-start">
-      <Row>
+      <Row className='gy-3'>
         {/* SALES & COSTS */}
         <Col lg={7}>
           <StatCard
