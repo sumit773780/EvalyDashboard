@@ -1,0 +1,28 @@
+$primary: #0F60FF !default;
+$secondary: #8B909A !default;
+$success: #1EB564 !default;
+$info: #0ea5e9 !default;
+$warning: #FFC600 !default;
+$danger: #D02626 !default;
+$light: #ceaccbf0 !default;
+$dark: #23272E !default;
+
+$white: #FFFFFF !default;
+$border-color: #E9EBEF !default;
+$bg-light: #F8F9FA !default;
+$bg-light-secondary: #F1F2F4 !default;
+$text-secondary:#4B465C !default;
+
+
+// GOOGLE FONT
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// FONT FAMILY VARIABLE
+$font-family-base: 'Public Sans', sans-serif !default;
+
+
+// APPLY GLOBAL
+body {
+  font-family: $font-family-base;
+}

@@ -1,0 +1,123 @@
+.signin-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LEFT SIDE FORM */
+.signin-left {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* CARD */
+.signin-card {
+  width: 100%;
+  max-width: 450px;
+  border: none !important;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: none !important;
+}
+
+/* LOGO */
+.signin-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* INPUTS */
+.signin-card .form-control,
+.signin-card .input-group-text,
+.signin-card .btn-outline-secondary {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* INPUT STYLE */
+.signin-card .form-control {
+  background: #f5f6fa;
+  height: 46px;
+  font-size: 14px;
+}
+
+.signin-card .input-group-text {
+  background: #f5f6fa;
+}
+
+.signin-card .form-control:focus {
+  background: #f5f6fa;
+  box-shadow: none !important;
+}
+
+/* PASSWORD BUTTON */
+.signin-card .btn-outline-secondary {
+  background: #f5f6fa !important;
+  color: #555;
+}
+
+/* LOGIN BUTTON */
+.signin-card .btn-primary {
+  height: 48px;
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+/* REMOVE ALL SHADOWS */
+.signin-card .btn,
+.signin-card .form-control,
+.signin-card .input-group-text {
+  box-shadow: none !important;
+}
+
+/* RIGHT SIDE IMAGE */
+.signin-right {
+  background-image: url("./log.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.signin-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .signin-right {
+    display: none;
+  }
+
+  .signin-left {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .signin-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .signin-card .card-body {
+    padding: 22px 18px;
+  }
+
+  .signin-card .form-control {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .signin-card .btn-primary {
+    height: 45px;
+  }
+}

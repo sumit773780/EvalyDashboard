@@ -1,0 +1,123 @@
+.signup-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LEFT IMAGE */
+.signup-image {
+  background-image: url("./log.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.signup-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* RIGHT FORM */
+.signup-form-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* CARD */
+.signup-card {
+  width: 100%;
+  max-width: 560px;
+  border: none !important;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: none !important;
+  background: #fff;
+}
+
+/* LOGO */
+.signup-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* INPUTS */
+.signup-card .form-control,
+.signup-card .input-group-text,
+.signup-card .btn-outline-secondary {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* INPUT STYLE */
+.signup-card .form-control {
+  background: #f5f6fa;
+  height: 46px;
+  font-size: 14px;
+}
+
+.signup-card .input-group-text {
+  background: #f5f6fa;
+}
+
+.signup-card .form-control:focus {
+  background: #f5f6fa;
+  box-shadow: none !important;
+}
+
+/* PASSWORD BUTTON */
+.signup-card .btn-outline-secondary {
+  background: #f5f6fa !important;
+  color: #555;
+}
+
+/* SUBMIT BUTTON */
+.signup-submit-btn {
+  height: 48px;
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+/* REMOVE ALL SHADOWS */
+.signup-card .btn,
+.signup-card .form-control,
+.signup-card .input-group-text {
+  box-shadow: none !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .signup-image {
+    display: none;
+  }
+
+  .signup-form-wrapper {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .signup-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .signup-card .card-body {
+    padding: 22px 18px;
+  }
+
+  .signup-card .form-control {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .signup-submit-btn {
+    height: 45px;
+  }
+}

@@ -1,0 +1,175 @@
+// Page-Specific Layout SCSS Rules
+
+// Dashboard Page Utilities
+.last-border-none {
+  &:last-child {
+    border-right: none !important;
+  }
+}
+
+// Reusable description max width to eliminate inline styling
+.text-desc-max-width {
+  max-width: 400px;
+}
+
+.small-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.chart-container-250 {
+  min-height: 250px;
+}
+
+.sparkline-chart-container {
+  height: 70px;
+  margin-top: 1.25rem;
+}
+
+// 404 Not Found Page Formatting
+.notfound-wrapper {
+  min-height: 100vh;
+  background-color: $bg-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.notfound-container {
+  max-width: 680px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notfound-illustration {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.notfound-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $dark;
+  margin-bottom: 0.5rem;
+}
+
+.notfound-text {
+  font-size: 0.9rem;
+  color: $secondary;
+  margin-bottom: 1.75rem;
+  max-width: 460px;
+  line-height: 1.5;
+}
+
+.notfound-btn {
+  background-color: #FF9F43; // Reusable Accent warning/orange color
+  border-color: #FF9F43;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+  box-shadow: 0px 4px 12px rgba(255, 159, 67, 0.2);
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken(#FF9F43, 10%);
+    border-color: darken(#FF9F43, 10%);
+    color: $white;
+    transform: translateY(-1px);
+    box-shadow: 0px 6px 16px rgba(255, 159, 67, 0.3);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// ================= ADMIN PROFILE PAGE STYLINGS =================
+.profile-avatar-wrapper {
+  width: 100px;
+  height: 100px;
+}
+
+.profile-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $primary 0%, #6f42c1 100%);
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+  box-shadow: 0px 8px 20px rgba(15, 96, 255, 0.2);
+}
+
+.avatar-edit-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $primary;
+  border: 2px solid $white;
+  color: $white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transform: scale(1.1);
+  }
+}
+
+.premium-alert-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1090;
+  min-width: 300px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba($success, 0.2);
+  border-radius: 8px;
+  background-color: $white;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.profile-input {
+  border-color: $border-color;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  color: $dark;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.1);
+  }
+}
+
+.extra-small {
+  font-size: 0.72rem;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+

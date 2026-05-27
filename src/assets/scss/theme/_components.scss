@@ -1,0 +1,522 @@
+// Reusable Component SCSS System
+
+// Premium Card Structures
+.premium-card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 1.3rem;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.015);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+
+  .card-header-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+
+    .card-title-custom {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: $dark;
+      margin: 0;
+    }
+    .card-subtitle-custom {
+      font-size: 0.85rem;
+      color: $secondary;
+      margin-top: 2px;
+    }
+
+    .card-actions-custom {
+      color: $secondary;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+      
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}
+
+// Metrics Layouts
+.metric-trend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+
+  &.trend-up {
+    color: $success;
+  }
+
+  &.trend-down {
+    color: $danger;
+  }
+}
+
+// Concentric Circular Bubbles for Top Category
+.top-category-visual {
+  height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.category-circle {
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  text-align: center;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .circle-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 2px;
+  }
+
+  .circle-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .circle-sub {
+    font-size: 0.55rem;
+    opacity: 0.85;
+    margin-top: 1px;
+  }
+
+  &.circle-fashion {
+    background: linear-gradient(135deg, $primary 0%, lighten($primary, 15%) 100%);
+    z-index: 3;
+    left: 15%;
+    top: 15%;
+    width: 130px;
+    height: 130px;
+  }
+
+  &.circle-electronics {
+    background: linear-gradient(135deg, $info 0%, lighten($info, 15%) 100%);
+    z-index: 2;
+    right: 18%;
+    top: 30%;
+    width: 110px;
+    height: 110px;
+  }
+
+  &.circle-makeup {
+    background: linear-gradient(135deg, $success 0%, lighten($success, 15%) 100%);
+    z-index: 1;
+    left: 28%;
+    bottom: 8%;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+// Category lists details below
+.category-item-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .legend-name {
+    color: $secondary;
+  }
+
+  .legend-value {
+    color: $dark;
+    font-weight: 600;
+    margin-left: auto;
+  }
+}
+
+// Table stylings
+.table-custom {
+  margin: 0;
+
+  thead th {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: $secondary;
+    background-color: $bg-light;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  tbody td {
+    padding: 1.1rem 1rem;
+    font-size: 0.85rem;
+    color: $dark;
+    border-bottom: 1px solid $bg-light-secondary;
+    vertical-align: middle;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+// Status Badges
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  &.status-stock {
+    background-color: rgba($success, 0.08);
+    color: $success;
+    &::before {
+      background-color: $success;
+    }
+  }
+
+  &.status-out {
+    background-color: rgba($danger, 0.08);
+    color: $danger;
+    &::before {
+      background-color: $danger;
+    }
+  }
+
+  &.status-pending {
+    background-color: rgba($warning, 0.1);
+    color: darken($warning, 15%);
+    &::before {
+      background-color: $warning;
+    }
+  }
+
+  &.status-completed {
+    background-color: rgba($success, 0.08);
+    color: $success;
+    &::before {
+      background-color: $success;
+    }
+  }
+}
+
+// Best Sellers Sub Side Panel List
+.side-product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.side-product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    
+    .product-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: $dark;
+      margin: 0;
+    }
+
+    .product-code {
+      font-size: 0.72rem;
+      color: $secondary;
+      margin-top: 2px;
+    }
+  }
+
+  .product-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $dark;
+  }
+}
+
+// ================= REPORTS TABS STYLINGS =================
+.reports-tabs {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 0px;
+  border-bottom: 1px solid $border-color;
+  
+  .reports-tab-item {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $secondary;
+    padding: 0 0 0.75rem 0;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s, font-weight 0.2s;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+      font-weight: 700;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $primary;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+// ================= HEADER FLOATING DROPDOWNS & BADGES =================
+.notification-wrapper {
+  position: relative;
+
+  .notification-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: $danger;
+    color: $white;
+    font-size: 0.62rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid $white;
+    box-shadow: 0px 2px 4px rgba($danger, 0.2);
+  }
+}
+
+.user-profile-badge {
+  position: relative;
+  
+  .online-indicator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 11px;
+    height: 11px;
+    background-color: $success;
+    border-radius: 50%;
+    border: 1.8px solid $white;
+    box-shadow: 0px 2px 4px rgba($success, 0.2);
+  }
+}
+
+.header-dropdown-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: $white;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+  z-index: 1060;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  &.dropdown-notifications {
+    width: 320px;
+    padding: 1rem;
+  }
+
+  &.dropdown-profile {
+    width: 220px;
+    padding: 0.5rem;
+  }
+
+  .dropdown-header-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+
+    .dropdown-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: $dark;
+      margin: 0;
+    }
+
+    .dropdown-action-btn {
+      font-size: 0.75rem;
+      color: $primary;
+      background: none;
+      border: none;
+      font-weight: 600;
+      padding: 0;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dropdown-list-group {
+    display: flex;
+    flex-direction: column;
+    max-height: 280px;
+    overflow-y: auto;
+    gap: 4px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $border-color;
+      border-radius: 4px;
+    }
+  }
+
+  .dropdown-item-custom {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 0.65rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid rgba($border-color, 0.5);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba($primary, 0.03);
+    }
+
+    .item-icon-wrapper {
+      padding: 6px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      &.bg-primary-light {
+        background-color: rgba($primary, 0.08);
+        color: $primary;
+      }
+      &.bg-success-light {
+        background-color: rgba($success, 0.08);
+        color: $success;
+      }
+      &.bg-warning-light {
+        background-color: rgba($warning, 0.1);
+        color: darken($warning, 15%);
+      }
+      &.bg-danger-light {
+        background-color: rgba($danger, 0.08);
+        color: $danger;
+      }
+    }
+
+    .item-details {
+      display: flex;
+      flex-direction: column;
+
+      .item-text {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: $dark;
+        line-height: 1.3;
+      }
+      .item-time {
+        font-size: 0.68rem;
+        color: $secondary;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  // Profile action links
+  .profile-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.65rem 0.85rem;
+    border-radius: 8px;
+    color: $secondary;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($primary, 0.04);
+      color: $primary;
+    }
+
+    &.text-danger:hover {
+      background-color: rgba($danger, 0.05);
+      color: $danger;
+    }
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
